@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizzy- Login</title>
+    <link rel="icon" type="image/png" href="favicon_io/favicon-32x32.png" />
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,600,700,900|Press+Start+2P|Kalam:wght@700|Ubuntu:900&display=swap"
+        rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/f95fbf7eb5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="container-fluid pad-b2">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="/">quizzy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/logout">Log out</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="profile-section">
+        <div class="row">
+            <div class="col-lg-2">
+                <img class="profile-image" src="https://i.pinimg.com/236x/47/5a/86/475a86177aeedacf8dc7f5e2b4eff61f.jpg"
+                    alt="profile-pic">
+            </div>
+            <div style="padding: 0 2%;" class="col-lg-10">
+                <h1><%= name %></h1>
+                <p><em><%= email %></em> </p>
+
+                <button style="margin-right: 2%;" data-toggle="modal" data-target="#changePassword" aria-haspopup="true"
+                    class="btn btn-sm btn-primary">Change password</button>
+
+                <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteAccount"
+                    aria-haspopup="true">Delete account</button>
+
+
+
+            </div>
+        </div>
+        <div id="scoreboard">
+            <br><br>
+            <h5>Quizzes taken</h5><br>
+            <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                <table class="table table-hover table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Topic</th>
+                            <th scope="col">Score</th>
+                            <th scope="col">Submission</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <% if (Data.length != 0) {
+                            var i = 1;
+                            Data.forEach(function(data){
+                         %>
+                        <tr>
+                            <td><%= i; %></td>
+                            <td><%= data.topic %></td>
+                            <td><%= data.score %></td>
+                            <td><%= data.submission.toString().substring(0, data.submission.toString().lastIndexOf(':') +3) %>
+                            </td>
+
+                        </tr>
+                        <%  i++; }) %>
+                        <% } else{ %>
+                        <tr>
+                            <td colspan="7"> - No quizzes taken so far - </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="container">
+        <div class="modal fade" id="changePassword">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header text-center">
+                        <h3 class="modal-title text-center">Change Password</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-body">
+                        <form action="/updatePassword" method="post">
+                            <br>
+                            <input class="form-control" placeholder="Old password" type="password" name="oldpasswd"
+                                id="oldpasswd"><br>
+
+
+                            <input id="newpasswd" class="form-control" type="password" name="newpasswd"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                placeholder="New password" required /> <br>
+                            <input class="form-control" type="password" name="confirm_passwd"
+                                placeholder="Confirm new passowrd" id="confirm-passwd" required />
+                            <br><br>
+                            <button class="btn btn-sm btn-success" type="submit">Change</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="modal fade" id="deleteAccount">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header text-center">
+                        <h3 class="modal-title text-center">Account deletion</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-body">
+                        <form class="form-1-button" action="/deleteAccount" method="post">
+                            <input class="form-control" type="password" name="passwd" placeholder="Enter password"
+                                required>
+                            <br><br>
+                            <p>Are you sure to delete your account?</p>
+                            <button class="btn btn-sm btn-danger">Yes, delete my account.</button>
+                            <button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contact">
+        <a class="contact-icons" href="https://twitter.com/Harish18501"><i class="fab fa-twitter"></i></a>
+        <a class="contact-icons" href="https://www.instagram.com/harish.2209/"><i class="fab fa-instagram"></i></a>
+        <a class="contact-icons" href="https://www.linkedin.com/in/harish501/"><i class="fab fa-linkedin"></i></a>
+        <a class="contact-icons" href="mailto:harish.sk501@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <footer>© 2020 Harish</footer>
+    <script>
+        var password = document.getElementById("newpasswd"),
+            confirm_password = document.getElementById("confirm-passwd");
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords don't Match");
+            } else {
+                confirm_password.setCustomValidity("");
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+
+    </script>
+</body>
+
+</html>

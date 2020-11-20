@@ -1,0 +1,90 @@
+[
+    {
+        "question": "In what year did Neil Armstrong and Buzz Aldrin land on the moon?",
+        "correct_answer": "1969",
+        "incorrect_answers": [
+            "1965",
+            "1966",
+            "1973"
+        ]
+    },
+    {
+        "question": "The Herero genocide was perpetrated in Africa by which of the following colonial nations?",
+        "correct_answer": "Germany",
+        "incorrect_answers": [
+            "Britain",
+            "Belgium",
+            "France"
+        ]
+    },
+    {
+        "question": "The original Roman alphabet lacked the following letters EXCEPT:",
+        "correct_answer": "X",
+        "incorrect_answers": [
+            "W",
+            "U",
+            "J"
+        ]
+    },
+    {
+        "question": "Who was the first president of the United States?",
+        "correct_answer": "George Washington",
+        "incorrect_answers": [
+            "James Madison",
+            "Thomas Jefferson",
+            "James K. Polk"
+        ]
+    },
+    {
+        "question": "Where and when was the first cardboard box made for industrial use?",
+        "correct_answer": "England, 1817",
+        "incorrect_answers": [
+            "United States, 1817",
+            "England, 1917",
+            "United States, 1917"
+        ]
+    },
+    {
+        "question": "What were the first states to break away from Yugoslavia?",
+        "correct_answer": "Slovenia, Croatia",
+        "incorrect_answers": [
+            "Macedonia, Montenegro",
+            "Slovenia, Macedonia",
+            "Montenegro, Slovenia"
+        ]
+    },
+    {
+        "question": "What was the unofficial name for Germany between 1919 and 1933?",
+        "correct_answer": "Weimar Republic",
+        "incorrect_answers": [
+            "German Democratic Republic",
+            "Federal Republic of Germany",
+            "Oesterreich "
+        ]
+    },
+    {
+        "question": "What year did World War I begin?",
+        "correct_answer": "1914",
+        "incorrect_answers": [
+            "1905",
+            "1919",
+            "1925"
+        ]
+    },
+    {
+        "question": "What was the code name for the German invasion of the Soviet Union in WW2?",
+        "correct_answer": "Operation Barbarossa",
+        "incorrect_answers": [
+            "Operation Kaiserschlact",
+            "Operation Unthinkable",
+            "Operation Molotov"
+        ]
+    },
+    {
+        "question": "The United States of America was the first country to launch a man into space.",
+        "correct_answer": "False",
+        "incorrect_answers": [
+            "True"
+        ]
+    }
+]

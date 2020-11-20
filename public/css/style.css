@@ -1,0 +1,265 @@
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+footer {
+  font-family: "Kalam", cursive;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(19, 30, 61);
+}
+
+.categories-form,
+.initial-form {
+  /* display: inline-block; */
+  text-align: center;
+}
+
+.container-fluid {
+  background-color: rgb(19, 30, 61);
+  padding: 5% 10% 7%;
+}
+
+.navbar {
+  padding: 0 0 4.5rem 0;
+}
+
+.navbar-brand {
+  font-family: "ubuntu", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.dropdown-item {
+  text-align: left;
+  /* margin-left: 0; */
+  padding-left: 5%;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(128, 128, 128, 0.342);
+}
+
+.text-box {
+  border-style: solid;
+  outline: none;
+  border-radius: 30px;
+  width: 30%;
+  padding: 0.5% 1%;
+}
+
+.text-box:focus {
+  border-width: 3px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.title-text {
+  color: white;
+  margin-bottom: 4%;
+}
+
+.title-image-1 {
+  width: 37%;
+  position: absolute;
+  right: 30%;
+}
+
+.title-image-2 {
+  width: 40%;
+  position: absolute;
+  right: 0;
+}
+
+.categories,
+.form-area,
+#profile-section {
+  padding: 7% 15%;
+  background-color: #fff;
+  position: relative;
+}
+
+.profile-image {
+  width: 100%;
+}
+
+#signup {
+  background-color: rgb(19, 30, 61);
+  color: #fff;
+}
+
+.topic {
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: "Kalam", cursive;
+}
+
+.description {
+  font-size: 1.2rem;
+}
+
+.img-hover-zoom--colorize img {
+  text-align: center;
+  transition: transform 0.5s, filter 1.5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+/* The Transformation */
+.img-hover-zoom--colorize:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+#custom {
+  padding: 7% 15%;
+  background-color: rgb(19, 30, 61);
+  color: #fff;
+}
+
+#about {
+  background-color: #fff;
+  position: relative;
+  padding: 7% 0;
+  height: 25rem;
+}
+
+.carousel-image1,
+.carousel-image2 {
+  width: 30%;
+  /* transform: rotate(25deg); */
+}
+
+.carousel-image2 {
+  transform: rotate(25deg);
+}
+
+.pad-left-15 {
+  padding-left: 15%;
+}
+
+.form-1-button {
+  display: inline-block;
+  margin: 1%;
+}
+
+#update-passwd-section {
+  display: none;
+}
+
+/* .carousel-item {
+  text-align: center;
+} */
+
+.col-000 {
+  color: #000;
+}
+
+#contact {
+  padding-top: 5%;
+  padding-bottom: 2%;
+  text-align: center;
+  background-color: rgb(19, 30, 61);
+  color: #fff;
+}
+
+.contact-icons {
+  color: #fff;
+  margin: 1%;
+}
+
+#start-button {
+  display: block;
+  margin: 10% auto;
+  width: 30%;
+}
+
+#question-area {
+  padding: 3% 15%;
+  /* font-family: "Kalam", cursive; */
+}
+
+/* .questions {
+  display: none;
+} */
+
+#totalQuestions {
+  /* font-weight: bold; */
+  font-size: smaller;
+}
+
+.options,
+.options-enabled {
+  border-style: solid;
+  border-color: gray;
+  display: inline-block;
+  width: 40%;
+  cursor: pointer;
+  padding: 1% 2%;
+  margin: 1% 3%;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.options-enabled:hover {
+  background-color: rgba(128, 128, 128, 0.322);
+}
+
+.wrong-answer {
+  background-color: rgba(218, 58, 37, 0.685);
+}
+
+.correct-answer {
+  background-color: rgba(37, 218, 37, 0.623);
+}
+
+.pad-b2 {
+  padding-bottom: 2%;
+}
+
+.pad-left-13 {
+  padding-left: 13%;
+}
+
+#next-button,
+#finish-quiz-button {
+  position: relative;
+  margin-left: 30%;
+  margin-top: 5%;
+  width: 30%;
+}
+
+#scoreboard {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 400px;
+  overflow: auto;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+@media (max-width: 1090px) {
+  .profile-image {
+    display: none;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "A quiz web application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harish",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^5.4.0",
+    "aws-sdk": "^2.787.0",
+    "body-parser": "^1.19.0",
+    "dom-parser": "^0.1.6",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "express-session": "^1.17.1",
+    "formidable": "^1.2.2",
+    "mysql": "^2.18.1"
+  }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quizzy</title>
+  <link rel="icon" type="image/png" href="favicon_io/favicon-32x32.png" />
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:300,600,700,900|Press+Start+2P|Kalam:wght@700|Ubuntu:900&display=swap"
+    rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- jQuery and JS bundle w/ Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+
+  <!-- font awesome  -->
+  <script src="https://kit.fontawesome.com/f95fbf7eb5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="/">quizzy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#custom">Custom</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user-circle fa-lg"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" id="profile" href="/profile">My Account</a>
+              <a class="dropdown-item" href="/logout">Log out</a>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-lg-5 title-text">
+        <h1>
+          Quench your thirst with fun & challenging online trivia.
+        </h1>
+      </div>
+      <div class="col-lg-7">
+        <img class="title-image-1" src="/images/thinking5.png" alt="" />
+        <img class="title-image-2" src="/images/thinking4.png" alt="" />
+      </div>
+    </div>
+
+    <!-- <img
+        src="https://img.freepik.com/free-vector/quiz-neon-sign_1262-19629.jpg"
+        alt=""
+        srcset=""
+      /> -->
+  </div>
+
+  <!-- categories -->
+  <div class="categories">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 img-hover-zoom--colorize">
+        <form class="categories-form" action="/gk" method="POST">
+          <button class="btn" type="submit">
+            <!-- <div class="img-hover-zoom--colorize"> -->
+            <img src="https://cdn2.iconfinder.com/data/icons/online-education-2-1/64/knowledge_growth1-512.png" alt=""
+              width="150px" />
+            <!-- </div> -->
+            <br /><br />
+            <p class="topic">General Knowledge</p>
+          </button>
+        </form>
+      </div>
+      <div class="col-lg-4 col-md-12 img-hover-zoom--colorize">
+        <form class="categories-form" action="/scienceNature" method="POST">
+          <button class="btn" type="submit">
+            <!-- <div class="img-hover-zoom--colorize"> -->
+            <img
+              src="https://previews.123rf.com/images/batsheba/batsheba1606/batsheba160600005/58458584-open-book-and-nature-landscape-of-hills-and-rainbow-science-and-nature-study-illustration-ecology-an.jpg"
+              alt="" width="200px" />
+            <!-- </div> -->
+            <br /><br />
+            <p class="topic">Science & Nature</p>
+          </button>
+        </form>
+      </div>
+
+      <div class="col-lg-4 col-md-12 img-hover-zoom--colorize">
+        <form class="categories-form" action="/sports" method="POST">
+          <button class="btn" type="submit">
+            <!-- <div class="img-hover-zoom--colorize"> -->
+            <img src="https://img.freepik.com/free-vector/sport-equipment-concept_1284-13034.jpg" alt=""
+              width="150px" />
+            <!-- </div> -->
+            <br /><br />
+            <p class="topic">Sports</p>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 img-hover-zoom--colorize">
+        <form class="categories-form" action="/maths" method="POST">
+          <button class="btn" type="submit">
+            <!-- <div class="img-hover-zoom--colorize"> -->
+            <img src="https://cdn3.iconfinder.com/data/icons/education-flat-icon/130/95-512.png" alt="" width="150px" />
+            <!-- </div> -->
+            <br /><br />
+            <p class="topic">Mathematics</p>
+          </button>
+        </form>
+      </div>
+      <div class="col-lg-6 col-md-12 img-hover-zoom--colorize">
+        <form class="categories-form" action="/history" method="POST">
+          <button class="btn" type="submit">
+            <!-- <div class="img-hover-zoom--colorize"> -->
+            <img src="https://i.pinimg.com/originals/2d/a0/96/2da0963c0c294434634fef5100fed3e2.png" alt=""
+              width="150px" />
+            <!-- </div> -->
+            <br /><br />
+            <p class="topic">History</p>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="custom" class="form-area">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>Create your own challenge!</h1>
+        <br><br>
+        <p class="description">- Challenge your friends with your own custom questions.</p>
+        <p class="description">- Take fun challenges from your friends.</p>
+      </div>
+      <div class="col-lg-6" style="text-align: center;">
+        <br><br><br><br>
+        <button class="btn btn-lg btn-outline-primary" data-toggle="modal" data-target="#createQuiz"
+          aria-haspopup="true" aria-expanded="false" style="width: 50%;"><strong>Create
+            quiz</strong></button>
+        <br><br><br>
+        <button class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#takeQuiz" aria-haspopup="true"
+          aria-expanded="false" style="width: 50%;"><strong>Take quiz</strong></button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="container">
+    <div class="modal fade" id="takeQuiz">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- header -->
+          <div class="modal-header text-center">
+            <h3 class="modal-title text-center">Take quiz</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- body -->
+          <div class="modal-body">
+            <form role="form" action="/takeQuiz" method="POST">
+              <div class="form-group">
+                <label for="email">Enter referral code</label>
+                <input type="text" class="form-control" name="code" required>
+              </div>
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="container">
+    <div class="modal fade" id="createQuiz">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- header -->
+          <div class="modal-header text-center">
+            <h3 class="modal-title text-center">Create quiz</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- body -->
+          <div class="modal-body">
+            <form role="form" action="/createQuiz" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <div class="form-row">
+                  <label for="">Upload a json file</label>
+                  <p><strong>Note:</strong> Make sure that the uploaded json file matches the correct format. Click <a
+                      href="/sample.json" target="blank">here</a> to see an example.</p>
+                  <div class="custom-file mb-3">
+                    <input style="cursor: pointer" type="file" class="custom-file-input" id="customFile"
+                      name="filetoupload" accept=".json" required />
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-dark">Upload</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+
+  <div id="contact">
+    <a class="contact-icons" href="https://twitter.com/Harish18501"><i class="fab fa-twitter"></i></a>
+    <a class="contact-icons" href="https://www.instagram.com/harish.2209/"><i class="fab fa-instagram"></i></a>
+    <a class="contact-icons" href="https://www.linkedin.com/in/harish501/"><i class="fab fa-linkedin"></i></a>
+    <a class="contact-icons" href="mailto:harish.sk501@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+  <footer>© 2020 Harish</footer>
+  <script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function () {
+      var fileName = $(this).val().split("\\").pop();
+      $(this)
+        .siblings(".custom-file-label")
+        .addClass("selected")
+        .html(fileName);
+    });
+  </script>
+</body>
+
+</html>
